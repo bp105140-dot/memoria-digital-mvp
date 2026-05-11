@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 
+import { getMusicEmbed } from "@/lib/music";
 import { createClient } from "@/lib/supabase/server";
 import { formatDate } from "@/lib/utils";
 import type { GiftPhoto, GiftRecord, TimelineEvent } from "@/types/gifts";
@@ -39,6 +40,7 @@ export default async function PublicGiftPage({
   const photoList = (photos ?? []) as GiftPhoto[];
   const timelineList = (timeline ?? []) as TimelineEvent[];
   const cover = photoList.find((photo) => photo.is_cover) ?? photoList[0];
+  const musicEmbed = getMusicEmbed(giftRecord.music_url);
 
   return (
     <div className="page-shell public-page public-page-romance">
@@ -90,12 +92,32 @@ export default async function PublicGiftPage({
               <h2>Nossa trilha</h2>
               <p>
                 {giftRecord.music_url
-                  ? "A musica escolhida ja esta pronta para acompanhar a experiencia."
+                  ? "A trilha escolhida acompanha a experiencia e, quando for YouTube, o clipe aparece aqui tambem."
                   : "Voce pode adicionar uma musica para deixar o presente ainda mais envolvente."}
               </p>
+
+              {musicEmbed ? (
+                <div className={`music-embed music-embed-${musicEmbed.provider}`}>
+                  <iframe
+                    src={musicEmbed.embedUrl}
+                    title={musicEmbed.label}
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  />
+                </div>
+              ) : null}
+
+              {musicEmbed?.provider === "youtube" ? (
+                <p className="music-note">
+                  O clipe tenta comecar sozinho, mas alguns navegadores so liberam o som depois do primeiro toque.
+                </p>
+              ) : null}
+
               {giftRecord.music_url ? (
                 <a href={giftRecord.music_url} target="_blank" rel="noreferrer" className="button-secondary">
-                  Abrir musica
+                  {musicEmbed ? `Abrir ${musicEmbed.provider === "youtube" ? "no YouTube" : "no Spotify"}` : "Abrir musica"}
                 </a>
               ) : null}
             </article>
