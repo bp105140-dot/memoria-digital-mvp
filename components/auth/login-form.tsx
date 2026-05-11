@@ -13,6 +13,27 @@ export function LoginForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
 
+  async function signInAnonymously() {
+    setStatus("loading");
+    setMessage("");
+
+    const supabase = createClient();
+    const { error } = await supabase.auth.signInAnonymously();
+
+    if (error) {
+      setStatus("error");
+      setMessage(
+        "Nao conseguimos entrar no modo teste. Ative o provider Anonymous no Supabase para usar esse atalho."
+      );
+      return;
+    }
+
+    setStatus("success");
+    setMessage("Modo teste liberado. Redirecionando...");
+    router.push("/meus-presentes");
+    router.refresh();
+  }
+
   async function sendCode(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setStatus("loading");
@@ -123,6 +144,14 @@ export function LoginForm() {
       {message ? (
         <div className={status === "error" ? "error-box" : "success-box"}>{message}</div>
       ) : null}
+
+      <div className="notice">
+        Para testar sem gastar envios de e-mail, use o acesso anonimo do Supabase.
+      </div>
+
+      <button className="button-secondary" type="button" onClick={signInAnonymously} disabled={status === "loading"}>
+        {status === "loading" ? "Entrando..." : "Entrar em modo teste"}
+      </button>
 
       <p className="form-helper">
         Depois de entrar, voce podera criar presentes, publicar a pagina e voltar para editar quando quiser.
