@@ -222,7 +222,7 @@ img {
 
 .hero-grid,
 .feature-layout,
-.dashboard-layout,
+dashboard-layout,
 .gift-layout,
 .footer-grid,
 .auth-layout,
@@ -999,6 +999,51 @@ img {
 
 code {
   font-family: Consolas, monospace;
+}
+
+.music-preview-card {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.music-preview-head {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.music-embed {
+  overflow: hidden;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background:
+    radial-gradient(circle at top, rgba(255, 94, 151, 0.12), transparent 48%),
+    rgba(7, 10, 24, 0.88);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.34);
+}
+
+.music-embed iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+}
+
+.music-embed-youtube iframe {
+  aspect-ratio: 16 / 9;
+  min-height: 220px;
+}
+
+.music-embed-spotify iframe {
+  min-height: 352px;
+}
+
+.music-note {
+  margin-top: 0.9rem;
+  font-size: 0.92rem;
+  color: var(--muted);
 }
 
 @keyframes drift-stars {
