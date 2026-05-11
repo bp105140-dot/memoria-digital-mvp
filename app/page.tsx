@@ -4,44 +4,44 @@ const steps = [
   {
     number: "1",
     icon: "01",
-    title: "Conte a sua historia",
-    copy: "Escreva a mensagem, escolha os nomes e monte a abertura do presente em poucos minutos."
+    title: "Conte a história de vocês",
+    copy: "Escreva a mensagem principal, escolha os nomes e defina o tom da surpresa em poucos minutos."
   },
   {
     number: "2",
     icon: "02",
     title: "Personalize cada detalhe",
-    copy: "Suba fotos, organize os melhores momentos e escolha a musica que vai dar o clima certo."
+    copy: "Envie as fotos, organize os momentos mais importantes e escolha a música que acompanha a experiência."
   },
   {
     number: "3",
     icon: "03",
-    title: "Receba seu link",
-    copy: "Publique a experiencia, compartilhe por link ou QR Code e entregue de um jeito memoravel."
+    title: "Receba o link e o QR Code",
+    copy: "Publique o presente, compartilhe de forma elegante e entregue a surpresa do jeito que fizer mais sentido."
   },
   {
     number: "4",
     icon: "04",
-    title: "Emocione quem voce ama",
-    copy: "A pessoa abre no celular e encontra uma surpresa bonita, romantica e pronta para tocar."
+    title: "Emocione quem você ama",
+    copy: "A pessoa abre no celular e encontra uma página bonita, fluida e feita para marcar aquele momento."
   }
 ];
 
 const resources = [
   {
-    eyebrow: "Feito para emocionar",
-    title: "Uma pagina-presente que parece especial desde o primeiro segundo.",
-    copy: "Hero de impacto, mensagem central, fotos em destaque e uma trilha que acompanha toda a experiencia."
+    eyebrow: "Página de abertura",
+    title: "Uma primeira impressão que já comunica valor e cuidado.",
+    copy: "Título forte, mensagem central, mockups elegantes e uma atmosfera visual que parece presente premium."
+  },
+  {
+    eyebrow: "Música incorporada",
+    title: "A trilha certa muda completamente a emoção da experiência.",
+    copy: "Adicione YouTube ou Spotify para transformar a página em algo mais íntimo, memorável e envolvente."
   },
   {
     eyebrow: "Linha do tempo",
-    title: "Capitulos visuais para contar a historia sem parecer formulario.",
-    copy: "Cada marco aparece com ritmo, contexto e profundidade, reforcando a narrativa do casal ou da relacao."
-  },
-  {
-    eyebrow: "Retrospectiva e clima",
-    title: "Mais atmosfera, mais brilho, mais vontade de compartilhar.",
-    copy: "Camadas, cards definidos, transicoes suaves e um visual que deixa o produto com cara de presente premium."
+    title: "Capítulos visuais para contar a história sem parecer um formulário.",
+    copy: "Cada marco ganha ritmo, contexto e presença, valorizando os momentos mais importantes da relação."
   }
 ];
 
@@ -49,41 +49,41 @@ const testimonials = [
   {
     name: "Fernanda",
     detail: "Presente para namorado",
-    quote: "Ficou com cara de algo feito por uma marca grande, mas com a nossa historia dentro."
+    quote: "Ficou com cara de algo muito maior do que um link. Parecia uma surpresa realmente preparada para aquele dia."
   },
   {
     name: "Ana Clara",
-    detail: "Aniversario de namoro",
-    quote: "O melhor foi conseguir montar rapido e ainda parecer uma surpresa super caprichada."
+    detail: "Aniversário de namoro",
+    quote: "O melhor foi conseguir montar rápido sem perder a sensação de cuidado. A apresentação fez toda a diferença."
   },
   {
     name: "Lucas",
-    detail: "Presente de ultima hora",
-    quote: "Abriu lindo no celular. A parte da musica e da timeline deixou tudo muito mais forte."
+    detail: "Presente de última hora",
+    quote: "Abriu lindo no celular. A música e a linha do tempo deixaram a experiência muito mais forte."
   },
   {
     name: "Juliana",
     detail: "Presente para esposa",
-    quote: "Tem cara de experiencia premium, nao de pagina improvisada. Era exatamente isso que eu queria."
+    quote: "Tem aparência de produto premium, não de página improvisada. Foi exatamente o que eu queria entregar."
   }
 ];
 
 const faqs = [
   {
     question: "O que vem no presente digital?",
-    answer: "Mensagem, fotos, musica, linha do tempo, pagina publica e uma experiencia pronta para compartilhar."
+    answer: "Mensagem, fotos, música, linha do tempo, página pública, link compartilhável e QR Code para entregar a surpresa."
   },
   {
     question: "Posso editar depois de criar?",
-    answer: "Sim. O comprador consegue voltar ao painel, alterar texto, fotos, tema e outros detalhes do presente."
+    answer: "Sim. O comprador pode voltar ao painel, ajustar textos, fotos, tema, música e outros detalhes do presente."
   },
   {
     question: "Funciona bem no celular?",
-    answer: "Sim. Toda a estrutura foi pensada para abrir bonito no celular, que e onde a maioria das pessoas vai viver a surpresa."
+    answer: "Sim. Toda a experiência foi pensada para abrir com impacto no celular, que é onde a maioria das pessoas vai viver a surpresa."
   },
   {
-    question: "Ja posso testar a experiencia?",
-    answer: "Sim. O fluxo de criacao, autenticacao e visualizacao publica ja existe e esta pronto para refinamento."
+    question: "Já posso testar a experiência?",
+    answer: "Sim. A base já está pronta para autenticação, criação, edição e visualização pública dos presentes."
   }
 ];
 
@@ -93,7 +93,7 @@ export default function HomePage() {
       <header className="site-header landing-header">
         <div className="container topbar">
           <Link href="/" className="brand landing-brand">
-            Memoria Digital
+            Memória Digital
           </Link>
           <nav className="nav landing-nav">
             <a href="#como-funciona">Como funciona</a>
@@ -111,14 +111,13 @@ export default function HomePage() {
         <section className="landing-hero">
           <div className="container landing-hero-grid">
             <div className="landing-hero-copy">
-              <span className="landing-kicker">O presente que emociona, pronto em minutos</span>
+              <span className="landing-kicker">Presente digital personalizado</span>
               <h1>
-                Declare o seu amor
-                <span> de um jeito que parece grande.</span>
+                Declare o seu amor com uma surpresa que parece feita sob medida.
               </h1>
               <p className="landing-hero-lead">
-                Crie um presente digital com fotos, musica, linha do tempo e uma experiencia visual
-                envolvente. Tudo pensado para abrir bonito no celular e emocionar de verdade.
+                Monte uma página com fotos, música, linha do tempo e mensagem final. Tudo com
+                visual elegante, pronto para abrir no celular e despertar a vontade de assistir até o fim.
               </p>
 
               <div className="hero-actions">
@@ -130,11 +129,20 @@ export default function HomePage() {
                 </Link>
               </div>
 
+              <div className="landing-trust-row">
+                <div className="trust-chip">Pronto em poucos minutos</div>
+                <div className="trust-chip">Link + QR Code</div>
+                <div className="trust-chip">Edição posterior</div>
+              </div>
+
               <div className="landing-social-proof">
                 <div className="landing-avatar">F</div>
                 <div>
-                  <strong>Fernanda</strong>
-                  <p>O tipo de surpresa que abre no celular e faz a pessoa parar tudo para ver.</p>
+                  <strong>Ideal para datas especiais</strong>
+                  <p>
+                    Perfeito para aniversário de namoro, Dia dos Namorados, pedido especial ou
+                    qualquer surpresa que mereça uma entrega bonita.
+                  </p>
                 </div>
               </div>
             </div>
@@ -144,38 +152,46 @@ export default function HomePage() {
               <div className="landing-heart heart-b" />
               <div className="landing-heart heart-c" />
 
-              <div className="landing-floating-stat stat-top">
-                <strong>+50k</strong>
-                <span>momentos registrados</span>
+              <div className="landing-floating-stat">
+                <strong>Entrega imediata</strong>
+                <span>Crie, publique e compartilhe no mesmo dia.</span>
               </div>
 
               <div className="landing-phones">
                 <div className="landing-phone phone-back left">
                   <div className="landing-phone-screen alt-screen">
-                    <span className="mini-pill">Timeline</span>
-                    <strong>Nossa Jornada</strong>
+                    <span className="mini-pill">Linha do tempo</span>
+                    <strong>Nossa jornada</strong>
+                    <div className="phone-list">
+                      <span>Primeira conversa</span>
+                      <span>Nosso primeiro encontro</span>
+                      <span>Um dia que mudou tudo</span>
+                    </div>
                   </div>
                 </div>
 
                 <div className="landing-phone phone-front">
                   <div className="landing-phone-screen main-screen">
                     <div className="music-bar">
-                      <span className="dot red" />
-                      <span className="dot yellow" />
-                      <span className="dot green" />
+                      <span className="dot coral" />
+                      <span className="dot peach" />
+                      <span className="dot mint" />
                     </div>
                     <div className="album-cover" />
-                    <p className="track-title">Until It Was A Thin</p>
-                    <p className="track-meta">Nossa musica especial</p>
+                    <p className="track-title">Nossa música</p>
+                    <p className="track-meta">A trilha que acompanha a surpresa</p>
                     <div className="player-line" />
-                    <div className="player-button">||</div>
+                    <div className="player-button">▶</div>
                   </div>
                 </div>
 
                 <div className="landing-phone phone-back right">
-                  <div className="landing-phone-screen alt-screen blue-screen">
-                    <span className="mini-pill">Mensagem</span>
-                    <strong>Voce e a melhor parte</strong>
+                  <div className="landing-phone-screen message-screen">
+                    <span className="mini-pill">Mensagem final</span>
+                    <strong>Você é a melhor parte da minha vida.</strong>
+                    <p className="phone-copy">
+                      Uma página que parece preparada com calma, carinho e intenção.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -183,14 +199,13 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="section landing-section" id="como-funciona">
+        <section className="section landing-section landing-section-white" id="como-funciona">
           <div className="container">
             <div className="landing-section-heading center-heading">
               <span className="landing-kicker">Como funciona</span>
-              <h2 className="landing-title">Crie um presente inesquecivel em 4 passos simples</h2>
+              <h2 className="landing-title">Crie um presente inesquecível em 4 passos simples</h2>
               <p className="landing-subtitle">
-                Nossa plataforma foi feita para transformar memoria, texto e musica em uma surpresa
-                digital com cara de produto premium.
+                A experiência foi desenhada para parecer caprichada para quem recebe e simples para quem cria.
               </p>
             </div>
 
@@ -207,20 +222,24 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="section landing-section">
+        <section className="section landing-section landing-section-soft">
           <div className="container landing-demo-grid">
             <div className="landing-demo-phone">
               <div className="landing-phone tall-phone">
                 <div className="landing-phone-screen timeline-screen">
                   <span className="mini-pill">Preview mobile</span>
-                  <strong>Nossa Jornada</strong>
+                  <strong>Nossa jornada</strong>
                   <div className="timeline-mini-card">
                     <small>19/12/2019</small>
-                    <span>Onde tudo comecou</span>
+                    <span>Onde tudo começou</span>
                   </div>
                   <div className="timeline-mini-card">
                     <small>Primeira viagem</small>
-                    <span>Um capitulo marcante</span>
+                    <span>Um capítulo marcante</span>
+                  </div>
+                  <div className="timeline-mini-card">
+                    <small>Hoje</small>
+                    <span>E isso é só o começo</span>
                   </div>
                 </div>
               </div>
@@ -228,10 +247,10 @@ export default function HomePage() {
 
             <div className="landing-demo-copy">
               <span className="landing-kicker">Linha do tempo</span>
-              <h2 className="landing-title">Uma experiencia que guia o olhar e valoriza cada momento</h2>
+              <h2 className="landing-title">Uma experiência que guia o olhar e valoriza cada lembrança</h2>
               <p className="landing-subtitle left">
-                Reviva a jornada com uma linha do tempo animada, destaque para as fotos mais
-                importantes e uma composicao visual que deixa a historia mais gostosa de acompanhar.
+                Reviva a jornada com uma linha do tempo visual, destaque para as fotos mais importantes
+                e uma composição que deixa a história mais gostosa de acompanhar.
               </p>
               <div className="landing-slider-dots">
                 <span className="active" />
@@ -246,14 +265,14 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="section landing-section" id="recursos">
+        <section className="section landing-section landing-section-white" id="recursos">
           <div className="container">
             <div className="landing-section-heading center-heading">
               <span className="landing-kicker">Recursos</span>
-              <h2 className="landing-title">Crie um presente memoravel e unico</h2>
+              <h2 className="landing-title">Crie um presente memorável e verdadeiramente especial</h2>
               <p className="landing-subtitle">
-                A base do produto esta aqui: clareza comercial, visual mais definido e uma experiencia
-                que comunica valor antes mesmo da pessoa clicar.
+                Cada detalhe foi pensado para transformar fotos, música e palavras em uma surpresa
+                com presença, emoção e acabamento premium.
               </p>
             </div>
 
@@ -267,8 +286,12 @@ export default function HomePage() {
               ))}
 
               <article className="landing-resource-card landing-resource-wide">
-                <span className="resource-kicker">Demo visual</span>
-                <h3>Uma landing que parece produto de verdade, nao so uma pagina explicando ideia</h3>
+                <span className="resource-kicker">Demonstração visual</span>
+                <h3>Uma vitrine com cara de produto premium, não de página genérica</h3>
+                <p>
+                  Mockups, hierarquia clara, blocos bem definidos e uma apresentação que faz o
+                  visitante imaginar imediatamente a própria surpresa pronta.
+                </p>
                 <div className="landing-wide-showcase">
                   <div className="landing-phone mini-left">
                     <div className="landing-phone-screen alt-screen">
@@ -278,59 +301,74 @@ export default function HomePage() {
                   <div className="landing-phone mini-center">
                     <div className="landing-phone-screen main-screen">
                       <div className="album-cover small" />
-                      <p className="track-title">Momento Especial</p>
+                      <p className="track-title">Momento especial</p>
                     </div>
                   </div>
                   <div className="landing-phone mini-right">
-                    <div className="landing-phone-screen alt-screen blue-screen">
-                      <strong>Mensagem Final</strong>
+                    <div className="landing-phone-screen message-screen">
+                      <strong>Mensagem final</strong>
                     </div>
                   </div>
                 </div>
               </article>
 
-              <article className="landing-resource-card landing-numbers-card">
-                <span className="resource-kicker">Retrospectiva visual</span>
-                <div className="landing-number-stack">
-                  <strong>39.670</strong>
-                  <strong>39.670</strong>
-                  <strong>39.670</strong>
-                  <strong>39.670</strong>
+              <article className="landing-resource-card landing-metrics-card">
+                <span className="resource-kicker">O que o cliente leva</span>
+                <div className="landing-metric-list">
+                  <div>
+                    <strong>Até 60 fotos</strong>
+                    <span>dependendo do plano</span>
+                  </div>
+                  <div>
+                    <strong>1 trilha especial</strong>
+                    <span>YouTube ou Spotify</span>
+                  </div>
+                  <div>
+                    <strong>Link + QR Code</strong>
+                    <span>prontos para compartilhar</span>
+                  </div>
+                  <div>
+                    <strong>Edição posterior</strong>
+                    <span>para ajustar quando quiser</span>
+                  </div>
                 </div>
               </article>
             </div>
           </div>
         </section>
 
-        <section className="section landing-section">
+        <section className="section landing-section landing-section-soft">
           <div className="container">
             <div className="landing-banner">
               <div>
-                <span className="landing-kicker">Demo interativa</span>
-                <h2>Teste uma experiencia com cara de surpresa premium</h2>
-                <p>Essa landing pode virar a vitrine perfeita para o nosso criador real.</p>
+                <span className="landing-kicker">Pronto para impressionar</span>
+                <h2>Monte uma surpresa com presença, ritmo e emoção desde o primeiro toque</h2>
+                <p>
+                  Escolha a trilha, organize os momentos mais marcantes e entregue uma experiência
+                  que parece exclusiva para quem vai receber.
+                </p>
               </div>
               <Link href="/criar" className="button landing-primary">
-                Explorar criador
+                Explorar o criador
               </Link>
             </div>
           </div>
         </section>
 
-        <section className="section landing-section">
+        <section className="section landing-section landing-section-white">
           <div className="container">
             <div className="landing-section-heading center-heading">
               <span className="landing-kicker">Depoimentos</span>
-              <h2 className="landing-title">O que nossos clientes diriam ao abrir uma surpresa assim</h2>
+              <h2 className="landing-title">Reações que mostram o valor de uma surpresa bem entregue</h2>
               <p className="landing-subtitle">
-                O desenho da pagina agora sustenta muito melhor prova social, conversao e percepcao de valor.
+                Quem cria busca praticidade. Quem recebe percebe cuidado, intenção e beleza em cada detalhe.
               </p>
             </div>
 
             <div className="landing-testimonial-grid">
               {testimonials.map((item) => (
                 <article key={item.name} className="landing-testimonial-card">
-                  <div className="testimonial-stars">5 estrelas</div>
+                  <div className="testimonial-stars">Excelente experiência</div>
                   <p>{item.quote}</p>
                   <div className="testimonial-author">
                     <strong>{item.name}</strong>
@@ -342,36 +380,36 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="section landing-section" id="planos">
+        <section className="section landing-section landing-section-soft" id="planos">
           <div className="container">
             <div className="landing-section-heading center-heading">
-              <span className="landing-kicker">Planos e precos</span>
-              <h2 className="landing-title">Escolha o plano ideal para voce</h2>
+              <span className="landing-kicker">Planos e preços</span>
+              <h2 className="landing-title">Escolha o plano ideal para a sua surpresa</h2>
               <p className="landing-subtitle">
-                Pagamento unico, sem mensalidade. Um presente digital com aparencia premium e valor percebido maior.
+                Pagamento único, sem mensalidade, com tudo o que você precisa para criar, publicar e compartilhar.
               </p>
             </div>
 
             <div className="landing-pricing-grid">
               <article className="landing-price-card">
-                <span className="resource-kicker">Presente Essencial</span>
+                <span className="resource-kicker">Presente essencial</span>
                 <h3>R$ 24,90</h3>
                 <ul>
                   <li>Acesso por 1 ano</li>
-                  <li>10 fotos</li>
-                  <li>1 musica</li>
+                  <li>Até 10 fotos</li>
+                  <li>1 música incorporada</li>
                   <li>Link e QR Code</li>
                 </ul>
               </article>
 
               <article className="landing-price-card featured">
-                <span className="resource-kicker">Para sempre</span>
+                <span className="resource-kicker">Para guardar por mais tempo</span>
                 <h3>R$ 34,90</h3>
                 <ul>
-                  <li>Pagina sem limite de carinho</li>
-                  <li>Mais fotos e timeline</li>
-                  <li>Visual premium</li>
-                  <li>Edicao posterior</li>
+                  <li>Mais fotos e linha do tempo</li>
+                  <li>Visual mais completo</li>
+                  <li>Edição posterior</li>
+                  <li>Experiência mais rica</li>
                 </ul>
               </article>
             </div>
@@ -384,13 +422,13 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="section landing-section" id="faq">
+        <section className="section landing-section landing-section-white" id="faq">
           <div className="container landing-faq-layout">
             <div className="landing-faq-intro">
               <span className="landing-kicker">Perguntas frequentes</span>
-              <h2 className="landing-title">Tire suas duvidas</h2>
+              <h2 className="landing-title">Tire suas dúvidas</h2>
               <p className="landing-subtitle left">
-                Essa estrutura tambem ajuda muito a pagina a parecer mais completa, confiavel e pronta para vender.
+                Separamos as dúvidas mais comuns para você decidir com tranquilidade e criar com segurança.
               </p>
               <div className="landing-contact-card">
                 <strong>Instagram</strong>
@@ -420,9 +458,9 @@ export default function HomePage() {
       <footer className="landing-footer">
         <div className="container landing-footer-grid">
           <div>
-            <strong>Memoria Digital</strong>
+            <strong>Memória Digital</strong>
             <p>
-              Crie experiencias digitais com fotos, musica, timeline e uma entrega romantica pronta
+              Crie experiências digitais com fotos, música, linha do tempo e uma entrega romântica pronta
               para compartilhar.
             </p>
           </div>
