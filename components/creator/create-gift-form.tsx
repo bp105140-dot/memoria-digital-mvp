@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
+import { getMusicEmbed } from "@/lib/music";
 import { createClient } from "@/lib/supabase/client";
 import { slugify } from "@/lib/utils";
 import type { GiftPhoto, GiftRecord, TimelineEvent } from "@/types/gifts";
@@ -72,6 +73,7 @@ export function CreateGiftForm({
     if (form.slug.trim()) return slugify(form.slug);
     return slugify(`${form.recipient_name || "presente"}-${form.title || "memoria"}`);
   }, [form.recipient_name, form.slug, form.title]);
+  const musicEmbed = useMemo(() => getMusicEmbed(form.music_url), [form.music_url]);
 
   function updateField<K extends keyof FormState>(field: K, value: FormState[K]) {
     setForm((current) => ({ ...current, [field]: value }));
@@ -405,6 +407,28 @@ export function CreateGiftForm({
                       placeholder="https://open.spotify.com/... ou https://youtube.com/..."
                     />
                   </label>
+                  {musicEmbed ? (
+                    <div className="music-preview-card" style={{ gridColumn: "1 / -1" }}>
+                      <div className="music-preview-head">
+                        <strong>{musicEmbed.provider === "youtube" ? "Clipe pronto para o presente" : "Player pronto para o presente"}</strong>
+                        <span className="muted">
+                          {musicEmbed.provider === "youtube"
+                            ? "O presente vai mostrar o clipe dentro do card da musica."
+                            : "O presente vai incorporar o player da faixa ou playlist."}
+                        </span>
+                      </div>
+                      <div className={`music-embed music-embed-${musicEmbed.provider}`}>
+                        <iframe
+                          src={musicEmbed.embedUrl}
+                          title={musicEmbed.label}
+                          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                          loading="lazy"
+                          referrerPolicy="strict-origin-when-cross-origin"
+                          allowFullScreen
+                        />
+                      </div>
+                    </div>
+                  ) : null}
                 </div>
               ) : null}
 
