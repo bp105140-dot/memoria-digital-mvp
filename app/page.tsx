@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LumiMascot, RibbonDoodle, SparkleDoodle } from "@/components/landing/lumi-mascot";
 
 const steps = [
   {
@@ -148,6 +149,8 @@ export default function HomePage() {
             </div>
 
             <div className="landing-hero-visual">
+              <RibbonDoodle className="landing-ribbon landing-ribbon-hero" size={210} />
+              <SparkleDoodle className="landing-sparkles landing-sparkles-hero" size={88} />
               <div className="landing-heart heart-a" />
               <div className="landing-heart heart-b" />
               <div className="landing-heart heart-c" />
@@ -155,6 +158,14 @@ export default function HomePage() {
               <div className="landing-floating-stat">
                 <strong>Entrega imediata</strong>
                 <span>Crie, publique e compartilhe no mesmo dia.</span>
+              </div>
+
+              <div className="landing-mascot-chip">
+                <LumiMascot className="landing-mascot-mini" size={86} />
+                <div>
+                  <strong>Conheça a Lumi</strong>
+                  <span>Uma mascote criada para dar leveza, afeto e identidade à experiência.</span>
+                </div>
               </div>
 
               <div className="landing-phones">
@@ -293,20 +304,27 @@ export default function HomePage() {
                   visitante imaginar imediatamente a própria surpresa pronta.
                 </p>
                 <div className="landing-wide-showcase">
-                  <div className="landing-phone mini-left">
-                    <div className="landing-phone-screen alt-screen">
-                      <strong>Momentos</strong>
+                  <RibbonDoodle className="landing-ribbon landing-ribbon-showcase" size={220} />
+                  <SparkleDoodle className="landing-sparkles landing-sparkles-showcase" size={76} />
+                  <div className="landing-showcase-stage">
+                    <div className="landing-phone mini-left">
+                      <div className="landing-phone-screen alt-screen">
+                        <strong>Momentos</strong>
+                      </div>
                     </div>
-                  </div>
-                  <div className="landing-phone mini-center">
-                    <div className="landing-phone-screen main-screen">
-                      <div className="album-cover small" />
-                      <p className="track-title">Momento especial</p>
+                    <div className="landing-phone mini-center">
+                      <div className="landing-phone-screen main-screen">
+                        <div className="album-cover small" />
+                        <p className="track-title">Momento especial</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="landing-phone mini-right">
-                    <div className="landing-phone-screen message-screen">
-                      <strong>Mensagem final</strong>
+                    <div className="landing-phone mini-right">
+                      <div className="landing-phone-screen message-screen">
+                        <strong>Mensagem final</strong>
+                      </div>
+                    </div>
+                    <div className="landing-showcase-mascot">
+                      <LumiMascot size={112} />
                     </div>
                   </div>
                 </div>
@@ -333,6 +351,40 @@ export default function HomePage() {
                   </div>
                 </div>
               </article>
+            </div>
+          </div>
+        </section>
+
+        <section className="section landing-section landing-section-soft landing-mascot-section">
+          <div className="container landing-mascot-grid">
+            <div className="landing-mascot-copy">
+              <span className="landing-kicker">Assinatura visual</span>
+              <h2 className="landing-title">A Lumi nasceu para fazer a marca parecer lembrança desde o primeiro olhar</h2>
+              <p className="landing-subtitle left">
+                Pequenos desenhos, brilhos e uma personagem própria deixam a página mais memorável,
+                mais encantadora e muito menos genérica. É esse tipo de acabamento que faz a marca
+                ficar na cabeça.
+              </p>
+              <div className="landing-trust-row">
+                <div className="trust-chip">Ilustração proprietária</div>
+                <div className="trust-chip">Visual afetivo</div>
+                <div className="trust-chip">Mais reconhecimento</div>
+              </div>
+            </div>
+
+            <div className="landing-mascot-stage">
+              <RibbonDoodle className="landing-ribbon landing-ribbon-stage" size={250} />
+              <SparkleDoodle className="landing-sparkles landing-sparkles-stage" size={92} />
+              <div className="landing-mascot-stage-card">
+                <LumiMascot className="landing-lumi-large" size={220} />
+                <div className="landing-mascot-note">
+                  <strong>Lumi, a mensageira do afeto</strong>
+                  <p>
+                    Ela aparece nos detalhes da experiência para amarrar a narrativa com ternura,
+                    leveza e personalidade própria.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
