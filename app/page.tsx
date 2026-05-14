@@ -55,7 +55,7 @@ const testimonials = [
   {
     name: "Ana Clara",
     detail: "Aniversário de namoro",
-    quote: "O melhor foi conseguir montar rápido sem perder a sensação de cuidado. A apresentação fez toda a diferença."
+    quote: "O melhor foi conseguir rápido sem perder a sensação de cuidado. A apresentação fez toda a diferença."
   },
   {
     name: "Lucas",
@@ -307,20 +307,53 @@ export default function HomePage() {
                   <RibbonDoodle className="landing-ribbon landing-ribbon-showcase" size={220} />
                   <SparkleDoodle className="landing-sparkles landing-sparkles-showcase" size={76} />
                   <div className="landing-showcase-stage">
+                    <div className="showcase-floating-tag">Fotos, trilha e mensagem no mesmo presente</div>
                     <div className="landing-phone mini-left">
                       <div className="landing-phone-screen alt-screen">
-                        <strong>Momentos</strong>
+                        <span className="mini-pill">Galeria</span>
+                        <strong>Momentos favoritos</strong>
+                        <div className="showcase-thumbs">
+                          <span className="thumb thumb-warm" />
+                          <span className="thumb thumb-cool" />
+                          <span className="thumb thumb-soft" />
+                        </div>
+                        <div className="showcase-stack">
+                          <span>Fotos em destaque</span>
+                          <span>Ordem inteligente</span>
+                          <span>Lembranças com contexto</span>
+                        </div>
                       </div>
                     </div>
                     <div className="landing-phone mini-center">
                       <div className="landing-phone-screen main-screen">
+                        <span className="mini-pill">Trilha + capa</span>
                         <div className="album-cover small" />
                         <p className="track-title">Momento especial</p>
+                        <p className="track-meta">Uma cena que já parece presente pronto</p>
+                        <div className="player-line" />
+                        <div className="showcase-player-row">
+                          <span>01:12</span>
+                          <div className="player-button">▶</div>
+                          <span>03:47</span>
+                        </div>
                       </div>
                     </div>
                     <div className="landing-phone mini-right">
                       <div className="landing-phone-screen message-screen">
-                        <strong>Mensagem final</strong>
+                        <span className="mini-pill">Mensagem</span>
+                        <strong>Seu amor em palavras</strong>
+                        <div className="showcase-note-card">
+                          “Você faz qualquer data comum virar memória bonita.”
+                        </div>
+                        <div className="showcase-lines">
+                          <span />
+                          <span />
+                          <span className="short" />
+                        </div>
+                        <p className="showcase-message">
+                          Um fechamento íntimo, elegante e pronto para emocionar na primeira leitura.
+                        </p>
+                        <div className="showcase-signature">Com carinho, Van</div>
                       </div>
                     </div>
                     <div className="landing-showcase-mascot">
@@ -332,6 +365,35 @@ export default function HomePage() {
 
               <article className="landing-resource-card landing-metrics-card">
                 <span className="resource-kicker">O que o cliente leva</span>
+                <div className="landing-metrics-intro">
+                  <strong className="landing-metrics-lead">Tudo pronto para enviar no mesmo dia.</strong>
+                  <div className="landing-metrics-visual">
+                    <div className="landing-metrics-link">
+                      <span>Entrega rápida</span>
+                      <strong>Link privado com visual premium</strong>
+                    </div>
+                    <div className="landing-metrics-qr" aria-hidden="true">
+                      <span />
+                      <span />
+                      <span />
+                      <span />
+                      <span />
+                      <span />
+                      <span />
+                      <span />
+                      <span />
+                    </div>
+                  </div>
+                  <p className="landing-metrics-copy">
+                    Tudo sai pronto para emocionar, compartilhar e continuar disponível para ajustes
+                    depois.
+                  </p>
+                  <div className="landing-metrics-tags">
+                    <span>Sem app</span>
+                    <span>QR Code</span>
+                    <span>Edição posterior</span>
+                  </div>
+                </div>
                 <div className="landing-metric-list">
                   <div>
                     <strong>Até 60 fotos</strong>
